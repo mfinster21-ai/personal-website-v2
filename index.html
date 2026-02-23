@@ -992,6 +992,75 @@
       .hero__ctas { flex-direction: column; align-items: flex-start; }
       .credentials { gap: 6px; }
     }
+    /* ── Publications rows ───────────────────────────────────── */
+    .pub-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px 40px;
+      background: var(--ink-80);
+      padding: 28px 32px;
+      border-left: 2px solid transparent;
+      transition: background var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+      align-items: start;
+    }
+    .pub-row:hover {
+      background: rgba(47,74,109,0.30);
+      border-left-color: var(--copper);
+    }
+    .pub-row__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 3px;
+    }
+    .pub-row__journal {
+      font-family: var(--ff-body);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--copper);
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .pub-row__year {
+      font-family: var(--ff-body);
+      font-size: 0.70rem;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      letter-spacing: 0.08em;
+    }
+    .pub-row__title {
+      font-family: var(--ff-display);
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .pub-row__authors {
+      font-size: 0.78rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+    }
+    .pub-row__abstract {
+      font-size: 0.86rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ── Podcast section responsive ─────────────────────────── */
+    @media (max-width: 860px) {
+      .podcast-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+    @media (max-width: 700px) {
+      .pub-row { grid-template-columns: 1fr; gap: 10px; }
+      .pub-row__meta { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px; }
+    }
+
   </style>
 </head>
 <body>
@@ -1213,31 +1282,45 @@
 
       <!-- Feature card — wide -->
       <div class="impact-card impact-card--feature reveal">
-        <span class="impact-card__context">Foundation Investment Strategy</span>
-        <div class="impact-card__metric">$42M</div>
-        <h3>Portfolio-wide evaluation framework for a national education foundation's teacher effectiveness investments</h3>
-        <p>Developed a unified theory of action and measurement architecture across 14 discrete grantee programs — enabling the foundation to make comparative investment decisions for the first time in its history. Resulted in a portfolio restructuring that concentrated resources on three high-leverage initiatives with strongest evidence of impact.</p>
+        <span class="impact-card__context">Federal Regional Education Laboratories · Northeast &amp; Islands</span>
+        <div class="impact-card__metric">$10M+</div>
+        <h3>Principal investigator on two flagship federal education initiatives shaping policy across 8 states</h3>
+        <p>Directed Abt Global's subcontract work as PI on the Northeast and Islands Regional Education Laboratory and Title IV, Part A Technical Assistance Center — two of the most consequential federal education infrastructure investments in the region. Managed research, evaluation, and TA delivery across a portfolio impacting state education agencies, districts, and schools serving hundreds of thousands of students. Simultaneously identified and advanced $16M+ in new business opportunities aligned to client priorities.</p>
       </div>
 
       <div class="impact-card reveal delay-2">
-        <span class="impact-card__context">State Agency Partnership</span>
-        <div class="impact-card__metric">6 States</div>
-        <h3>Multi-state educator workforce research initiative</h3>
-        <p>Led a cross-state research collaboration examining teacher recruitment and retention under shifting policy conditions. Findings directly informed legislative testimony in four states and shaped federal grant applications totaling $18M.</p>
+        <span class="impact-card__context">U.S. Department of Education · IDEA Grantees</span>
+        <div class="impact-card__metric">30+ Grantees<br><span style="font-size:1.4rem">10 States</span></div>
+        <h3>Federal capacity-building initiative: evaluation frameworks adopted across 10 states</h3>
+        <p>Provided strategic advising and capacity-building support to 30+ federal IDEA grantees on program evaluation design — developing monitoring frameworks and evaluation tools that were adopted and institutionalized by stakeholders across 10 states, enabling sustained evidence-informed decision-making beyond the engagement.</p>
       </div>
 
       <div class="impact-card reveal">
-        <span class="impact-card__context">Federal Agency Engagement</span>
-        <div class="impact-card__metric">3 Years</div>
-        <h3>Sustained technical assistance on evidence-based program implementation</h3>
-        <p>Provided ongoing strategic advisory and evaluation design support to a federal education office — developing implementation frameworks and learning systems that equipped regional partners to use data in real-time program decisions.</p>
+        <span class="impact-card__context">Comprehensive Center Network · Regions 5 &amp; 14</span>
+        <div class="impact-card__metric">$25M+</div>
+        <h3>Investment alignment tools for the National Comprehensive Center and two Regional Centers</h3>
+        <p>Developed impact assessment tools spanning two Regional Comprehensive Centers and the National Comprehensive Center — creating the analytical infrastructure to align $25M+ in federal education funding with measurable student achievement outcomes. Directed multi-year TA projects across 4 states supporting 250+ local education agencies in strengthening educator effectiveness systems.</p>
       </div>
 
       <div class="impact-card reveal delay-2">
-        <span class="impact-card__context">Nonprofit Intermediary</span>
-        <div class="impact-card__metric">12 Districts</div>
-        <h3>Continuous improvement infrastructure across a regional education collaborative</h3>
-        <p>Designed and launched a district-facing continuous improvement system, including facilitated inquiry cycles and data use protocols, across twelve urban and rural districts. Year-two data showed measurable gains in instructional coherence indices.</p>
+        <span class="impact-card__context">Ohio Department of Education · Statewide Initiative</span>
+        <div class="impact-card__metric">5,000+<br><span style="font-size:1.4rem">Educators Surveyed</span></div>
+        <h3>Ohio Teacher Leadership Framework: statewide evaluation reaching 40,000+ educators</h3>
+        <p>Designed and co-directed a statewide representative evaluation of teacher leadership across Ohio, conducting a survey of 5,000+ educators and developing a teacher leadership toolkit with 15+ practitioner resources. The toolkit was made available to 40,000+ educators statewide — one of the largest direct-reach research-to-practice efforts in the state's recent history.</p>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="impact-card__context">AT&amp;T Aspire Initiative · Social Return Analysis</span>
+        <div class="impact-card__metric">$3.8B</div>
+        <h3>Social return on investment analysis of AT&amp;T's flagship education philanthropy program</h3>
+        <p>Conducted a rigorous social-return-on-investment analysis for AT&T's Aspire Initiative — estimating a total lifetime social return of $3.8 billion. The study provided AT&T with credible, publishable evidence for one of corporate America's largest education investments, directly informing continued and expanded philanthropic commitment.</p>
+      </div>
+
+      <div class="impact-card reveal delay-2">
+        <span class="impact-card__context">Newsweek · National School Rankings</span>
+        <div class="impact-card__metric">45M<br><span style="font-size:1.4rem">Audience Reached</span></div>
+        <h3>Pioneered Newsweek's annual public high school rankings — 14,000+ schools analyzed</h3>
+        <p>Led the methodological development of Newsweek's annual national public high school rankings — an analytically demanding project requiring the collection, cleaning, and synthesis of data from 14,000+ schools and reaching a national audience of 45 million. Established the ranking methodology as a credible, reproducible framework used in subsequent years.</p>
       </div>
 
     </div>
@@ -1254,22 +1337,21 @@
 
       <!-- Left: portrait + credentials -->
       <div class="about__portrait-wrap reveal">
-        <div class="about__portrait-frame" role="img" aria-label="Portrait placeholder — Dr. Matthew Finster">
-          <!-- SVG silhouette placeholder -->
-          <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="100" cy="75" r="42" fill="rgba(176,141,87,0.15)" stroke="rgba(176,141,87,0.20)" stroke-width="1"/>
-            <path d="M16 250 Q16 170 100 170 Q184 170 184 250" fill="rgba(176,141,87,0.10)" stroke="rgba(176,141,87,0.18)" stroke-width="1"/>
-          </svg>
+        <div class="about__portrait-frame" role="img" aria-label="Dr. Matthew Finster, Founder of Evidence to Lead">
+          <img src="matthew-finster.jpg" alt="Dr. Matthew Finster" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(18%) contrast(1.04);">
         </div>
         <div class="about__portrait-caption">
           <div class="about__portrait-name">Dr. Matthew Finster</div>
           <div class="about__portrait-title">Founder &amp; Principal, Evidence to Lead, LLC</div>
         </div>
         <div class="credentials">
-          <span class="credential-badge">PhD</span>
-          <span class="credential-badge">PgMP</span>
-          <span class="credential-badge">20+ Years</span>
-          <span class="credential-badge">Federal · State · Foundation</span>
+          <span class="credential-badge">Ph.D. · UW</span>
+          <span class="credential-badge">PgMP®</span>
+          <span class="credential-badge">PMP®</span>
+          <span class="credential-badge">What Works Clearinghouse</span>
+          <span class="credential-badge">IES Research Training</span>
+          <span class="credential-badge">MIT Executive Education</span>
+          <span class="credential-badge">15+ Years</span>
         </div>
       </div>
 
@@ -1282,15 +1364,15 @@
         </h2>
         <div class="copper-rule"></div>
 
-        <p>Evidence to Lead was founded on a simple conviction that took two decades to fully understand: the distance between a rigorous research finding and a changed practice is rarely a shortage of evidence. It is almost always a shortage of clarity, alignment, and the right strategic architecture to move findings into decisions.</p>
+        <p>Dr. Matthew Finster is a strategic education researcher and technical assistance leader with over 15 years of experience working at the intersection of evidence, policy, and practice. He has partnered with federal agencies, state education departments, national foundations, and local school systems to build the evaluative and strategic infrastructure that enables leaders to make decisions grounded in what the evidence actually supports.</p>
 
         <div class="about__pull-quote">
-          "Research only matters when it reaches the people making consequential decisions — and that requires doing the harder work of translation, alignment, and sustained partnership."
+          "Strong evidence alone does not produce change. Leaders need clarity, alignment, and practical implementation strategies — and that is the work Evidence to Lead was built to do."
         </div>
 
-        <p>Dr. Finster has spent more than two decades working at that distance — inside federal agencies, university research centers, and direct advisory relationships with state education departments and national foundations. He has designed evaluations, led cross-agency strategy initiatives, and served as a thought partner to leaders navigating some of the most complex questions in American education policy.</p>
+        <p>His career spans principal researcher roles at Abt Global and Westat, where he directed multi-million dollar federal initiatives, led cost-effectiveness studies using randomized-controlled and quasi-experimental designs, and guided 250+ local education agencies in strengthening educator effectiveness systems. He applies advanced quantitative methods — structural equation modeling, multilevel regression analysis, latent growth curve analysis — not to produce sophisticated-looking reports, but to answer the questions that drive real decisions.</p>
 
-        <p>Evidence to Lead is a boutique practice by design. Every engagement receives direct, sustained attention. The goal is never to produce a report — it is to shift the quality of decisions being made and build the organizational capacity to keep making better ones.</p>
+        <p>Dr. Finster holds a Ph.D. in Educational Leadership and Policy Studies from the University of Washington and is a Program Management Professional (PgMP®) and What Works Clearinghouse Certified Reviewer. He is Associate Editor of the <em>Journal of Education Human Resources</em> and has authored or co-authored 75+ peer-reviewed publications, reports, and practitioner tools, with work featured in <em>Education Week</em>, the <em>Journal of Research on Educational Effectiveness</em>, and <em>Newsweek</em>.</p>
 
         <div class="about__areas">
           <div class="about__area">
@@ -1307,15 +1389,15 @@
           </div>
           <div class="about__area">
             <span class="about__area-line" aria-hidden="true"></span>
-            <span class="about__area-text">Philanthropic strategy &amp; investment design</span>
+            <span class="about__area-text">Cost-effectiveness analysis (RCT &amp; QED)</span>
           </div>
           <div class="about__area">
             <span class="about__area-line" aria-hidden="true"></span>
-            <span class="about__area-text">Cross-agency alignment &amp; coordination</span>
+            <span class="about__area-text">Federal &amp; state TA design and delivery</span>
           </div>
           <div class="about__area">
             <span class="about__area-line" aria-hidden="true"></span>
-            <span class="about__area-text">Policy analysis &amp; legislative strategy</span>
+            <span class="about__area-text">Philanthropic strategy &amp; investment alignment</span>
           </div>
         </div>
 
@@ -1332,8 +1414,147 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     CTA SECTION — Full-width navy, centered, decisive
+     PUBLICATIONS — Peer-reviewed work
 ════════════════════════════════════════════════════════ -->
+<section style="background:var(--ink-90);padding:var(--sec-lg) 0;" id="publications" aria-labelledby="pub-heading">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:clamp(48px,6vw,72px);">
+      <span class="overline">Peer-Reviewed Work</span>
+      <h2 id="pub-heading" style="font-family:var(--ff-display);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.2;color:var(--text-primary);letter-spacing:-0.01em;margin-bottom:12px;">
+        Selected <em>Publications</em>
+      </h2>
+      <p style="font-size:0.88rem;font-weight:300;color:var(--text-secondary);max-width:580px;line-height:1.8;margin-top:8px;">
+        75+ peer-reviewed publications, reports, and practitioner tools. Full list available at <a href="https://eric.ed.gov" target="_blank" rel="noopener" style="color:var(--copper);text-decoration:none;border-bottom:1px solid rgba(176,141,87,0.4);">ERIC</a>. Featured in <em>Education Week</em>, <em>Journal of Research on Educational Effectiveness</em>, <em>Journal of Education Human Resources</em>, and <em>Newsweek</em>.
+      </p>
+    </div>
+
+    <!-- Publications list -->
+    <div style="display:flex;flex-direction:column;gap:2px;border-radius:var(--radius-md);overflow:hidden;">
+
+      <div class="pub-row reveal">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Journal of Research on Educational Effectiveness</span>
+          <span class="pub-row__year">2023</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Cost-Effectiveness of Algebraic Technological Applications</h3>
+          <p class="pub-row__authors">Finster, M., Decker-Woodrow, L., Booker, B., Mason, C., Tu, S., &amp; Lee, J.</p>
+          <p class="pub-row__abstract">A cost-effectiveness analysis of three algebraic technological applications across four conditions — addressing the largest student mathematics performance decline since 1990 in the wake of COVID-19.</p>
+        </div>
+      </div>
+
+      <div class="pub-row reveal delay-1">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Journal of Education Human Resources</span>
+          <span class="pub-row__year">2023</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Building Sustainable Funding for Teacher Residency Programs</h3>
+          <p class="pub-row__authors">Finster, M., &amp; Fermanich, M.</p>
+          <p class="pub-row__abstract">A policy-focused analysis of the funding architectures that enable or undermine the long-term sustainability of teacher residency programs — with implications for state and district investment strategy.</p>
+        </div>
+      </div>
+
+      <div class="pub-row reveal delay-2">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Journal of Education Human Resources</span>
+          <span class="pub-row__year">2022</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Leaning in on Management to Empower Teacher Leaders</h3>
+          <p class="pub-row__authors">Finster, M., &amp; Lamitie, A.</p>
+          <p class="pub-row__abstract">Argues that district and school leaders need to apply strategic human capital management (SHCM) policies and practices to teacher leadership programs — providing nine practice areas and resources for district staff.</p>
+        </div>
+      </div>
+
+      <div class="pub-row reveal delay-1">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Education Policy Analysis Archives</span>
+          <span class="pub-row__year">2018</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Teacher Perceptions of a New Performance Evaluation System and Their Influence on Practice: A Within- and Between-School Level Analysis</h3>
+          <p class="pub-row__authors">Finster, M., &amp; Milanowski, A.</p>
+          <p class="pub-row__abstract">Using confirmatory factor analysis, structural equation modeling, and multilevel CFA on teacher survey data from a large midwestern district — examining linkages between PES perceptions, changed teaching practices, and potential student learning impact.</p>
+        </div>
+      </div>
+
+      <div class="pub-row reveal delay-2">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Journal of Education Human Resources</span>
+          <span class="pub-row__year">2021</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Assessing Teachers' Perceptions of Human Capital Management System Alignment of Teacher Leadership Initiatives</h3>
+          <p class="pub-row__authors">Finster, M.</p>
+          <p class="pub-row__abstract">A quantitative approach to assessing HCMS alignment across teacher leadership initiatives — examining how initiative goals, selection functions, and professional development are related to perceived effects of teacher leadership programs.</p>
+        </div>
+      </div>
+
+      <div class="pub-row reveal delay-1">
+        <div class="pub-row__meta">
+          <span class="pub-row__journal">Journal of Education Human Resources</span>
+          <span class="pub-row__year">2023</span>
+        </div>
+        <div class="pub-row__body">
+          <h3 class="pub-row__title">Talent Analytics in Education: Commentary</h3>
+          <p class="pub-row__authors">Finster, M.</p>
+          <p class="pub-row__abstract">A special issue commentary examining the state of talent analytics in K–12 education — where the field stands, what it needs, and what leaders can do to build the analytical capacity required for strategic human capital decisions.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;" class="reveal">
+      <p style="font-size:0.80rem;font-weight:300;color:var(--text-tertiary);font-style:italic;">Associate Editor, <em style="color:var(--text-secondary)">Journal of Education Human Resources</em> (2021–present) · Principal Reviewer, National Center for Education Research Efficacy Studies (2020–2025)</p>
+      <a href="https://eric.ed.gov" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:0.70rem;padding:10px 20px;">Full List on ERIC <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PODCAST SECTION
+════════════════════════════════════════════════════════ -->
+<section style="background:var(--ink);padding:clamp(56px,7vw,88px) 0;border-top:1px solid var(--ink-border);border-bottom:1px solid var(--ink-border);" aria-labelledby="podcast-heading">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="podcast-grid reveal">
+      <div>
+        <span class="overline">Now Listening</span>
+        <h2 id="podcast-heading" style="font-family:var(--ff-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;line-height:1.18;color:var(--text-primary);letter-spacing:-0.01em;margin-bottom:16px;">
+          Evidence to Lead <em>Podcast</em>
+        </h2>
+        <div class="copper-rule"></div>
+        <p style="font-size:0.96rem;font-weight:300;color:var(--text-secondary);line-height:1.85;margin-bottom:32px;">
+          Conversations at the intersection of research, leadership, and practice. Each episode explores how education leaders are — or aren't — using evidence to drive better decisions, and what it takes to close that gap.
+        </p>
+        <a href="https://music.amazon.com/podcasts" target="_blank" rel="noopener" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Listen on Amazon Music
+        </a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <!-- Podcast episode teasers -->
+        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Research → Practice</span>
+          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">Why Evaluation Findings Stay on Shelves — and What Leaders Can Do About It</p>
+          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
+        </div>
+        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Implementation Science</span>
+          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">What Cost-Effectiveness Analysis Actually Tells You — and What It Doesn't</p>
+          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
+        </div>
+        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Systems Thinking</span>
+          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">Building Educator Workforce Systems That Learn — Not Just Report</p>
+          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="cta-section" id="contact" aria-labelledby="cta-heading">
   <div class="wrap">
     <div class="cta-section__inner reveal">
@@ -1345,16 +1566,16 @@
       <p class="cta-section__body">
         Evidence to Lead works with a focused portfolio of partners. Most engagements begin with a single conversation — no intake form, no proposal deck. If the challenge is real and the commitment to evidence is genuine, that is enough to start.
       </p>
-      <a href="mailto:info@evidencetolead.com" class="btn btn-primary" style="font-size:0.8rem;padding:17px 40px;letter-spacing:0.16em">
+      <a href="mailto:mfinster21@gmail.com" class="btn btn-primary" style="font-size:0.8rem;padding:17px 40px;letter-spacing:0.16em">
         Start a Conversation
         <span class="btn-arrow" aria-hidden="true">→</span>
       </a>
       <div style="margin-top:28px">
-        <a href="mailto:info@evidencetolead.com"
+        <a href="mailto:mfinster21@gmail.com"
            style="font-family:var(--ff-body);font-size:0.78rem;color:rgba(240,237,230,0.45);letter-spacing:0.06em;transition:color var(--t-fast);"
            onmouseover="this.style.color='rgba(240,237,230,0.80)'"
            onmouseout="this.style.color='rgba(240,237,230,0.45)'">
-          info@evidencetolead.com
+          mfinster21@gmail.com
         </a>
       </div>
     </div>
