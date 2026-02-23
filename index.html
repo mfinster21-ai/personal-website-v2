@@ -1061,6 +1061,58 @@
       .pub-row__meta { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px; }
     }
 
+    /* ── Episode cards ───────────────────────────────────────── */
+    .ep-card {
+      background: var(--ink-80);
+      border: 1px solid var(--ink-border);
+      border-left: 2px solid transparent;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      transition: background var(--t-med) var(--ease), border-left-color var(--t-med) var(--ease);
+    }
+    .ep-card:hover {
+      background: rgba(47,74,109,0.28);
+      border-left-color: var(--copper);
+    }
+    .ep-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .ep-card__tag {
+      font-family: var(--ff-body);
+      font-size: 0.60rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--copper);
+    }
+    .ep-card__date {
+      font-family: var(--ff-body);
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+    .ep-card__title {
+      font-family: var(--ff-display);
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .ep-card__desc {
+      font-size: 0.80rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.70;
+      margin: 0;
+    }
+
   </style>
 </head>
 <body>
@@ -1517,7 +1569,7 @@
 ════════════════════════════════════════════════════════ -->
 <section style="background:var(--ink);padding:clamp(56px,7vw,88px) 0;border-top:1px solid var(--ink-border);border-bottom:1px solid var(--ink-border);" aria-labelledby="podcast-heading">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="podcast-grid reveal">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start;" class="podcast-grid reveal">
       <div>
         <span class="overline">Now Listening</span>
         <h2 id="podcast-heading" style="font-family:var(--ff-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;line-height:1.18;color:var(--text-primary);letter-spacing:-0.01em;margin-bottom:16px;">
@@ -1525,30 +1577,105 @@
         </h2>
         <div class="copper-rule"></div>
         <p style="font-size:0.96rem;font-weight:300;color:var(--text-secondary);line-height:1.85;margin-bottom:32px;">
-          Conversations at the intersection of research, leadership, and practice. Each episode explores how education leaders are — or aren't — using evidence to drive better decisions, and what it takes to close that gap.
+          The podcast for education professionals who want to move beyond opinions and into evidence-based action. Each episode distills key findings from educational research and policy briefs — featuring clear takeaways, tools, and reflections from the field.
         </p>
-        <a href="https://music.amazon.com/podcasts" target="_blank" rel="noopener" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:12px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
           Listen on Amazon Music
         </a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <!-- Podcast episode teasers -->
-        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
-          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Research → Practice</span>
-          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">Why Evaluation Findings Stay on Shelves — and What Leaders Can Do About It</p>
-          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
-        </div>
-        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
-          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Implementation Science</span>
-          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">What Cost-Effectiveness Analysis Actually Tells You — and What It Doesn't</p>
-          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
-        </div>
-        <div style="background:var(--ink-80);border:1px solid var(--ink-border);border-radius:var(--radius-md);padding:22px 24px;transition:background var(--t-med) var(--ease);" onmouseover="this.style.background='rgba(47,74,109,0.3)'" onmouseout="this.style.background='var(--ink-80)'">
-          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:8px;">Systems Thinking</span>
-          <p style="font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-primary);line-height:1.4;margin-bottom:6px;">Building Educator Workforce Systems That Learn — Not Just Report</p>
-          <span style="font-size:0.75rem;color:var(--text-tertiary);">Evidence to Lead Podcast</span>
-        </div>
+
+      <!-- Episode cards — real episodes from the podcast -->
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">AI &amp; Technology</span>
+              <span class="ep-card__date">Feb 3, 2026 · 16 min</span>
+            </div>
+            <p class="ep-card__title">AI Companions in Education: Promise, Peril, and Guardrails</p>
+            <p class="ep-card__desc">As AI tools become more embedded in education, a new category is emerging: AI companions — systems designed not only to support learning, but to simulate emotional connection. What does the research say, and what guardrails do schools need?</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Classroom Practice</span>
+              <span class="ep-card__date">Jan 15, 2026 · 14 min</span>
+            </div>
+            <p class="ep-card__title">The Hidden Cost of Classroom Interruptions</p>
+            <p class="ep-card__desc">Research shows intercom announcements, administrative visits, and everyday disruptions can cost students 10–20 days of learning each year. Why protecting "sacred" instructional time matters more than most leaders realize.</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Policy &amp; Safety</span>
+              <span class="ep-card__date">Dec 17, 2025 · 15 min</span>
+            </div>
+            <p class="ep-card__title">Beyond Prevention: How Schools and Communities Respond to Gun Violence</p>
+            <p class="ep-card__desc">Gun violence leaves lasting impacts that extend far beyond the moment of crisis. Research and policy insights on what schools and communities can do — drawing on Everytown Research &amp; Policy and related sources.</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Workforce &amp; Technology</span>
+              <span class="ep-card__date">Nov 21, 2025 · 15 min</span>
+            </div>
+            <p class="ep-card__title">The Cybersecurity Crisis: Building the Next Generation of Digital Defenders</p>
+            <p class="ep-card__desc">Across every sector, the world faces a growing cybersecurity workforce "chasm," with millions of positions unfilled. What can K–12 and higher education do to help close it?</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">AI in Schools</span>
+              <span class="ep-card__date">Nov 17, 2025 · 19 min</span>
+            </div>
+            <p class="ep-card__title">AI in the Classroom: What Teachers and Districts Are Learning</p>
+            <p class="ep-card__desc">Drawing on RAND's national survey of 1,000+ teachers — how AI is actually being used in K–12 classrooms, what's working, what's not, and what district leaders need to know before making policy decisions.</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Student Health &amp; Equity</span>
+              <span class="ep-card__date">Nov 10, 2025 · 10 min</span>
+            </div>
+            <p class="ep-card__title">Too Early to Learn? The Science and Policy of School Start Times</p>
+            <p class="ep-card__desc">A deceptively simple question with significant implications for student health, equity, and achievement. What does the research say about later school start times — and why is implementation so hard?</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Literacy &amp; Access</span>
+              <span class="ep-card__date">Nov 3, 2025 · 12 min</span>
+            </div>
+            <p class="ep-card__title">Books, Bans, and the Battle for Access: Understanding Soft Censorship in America</p>
+            <p class="ep-card__desc">Book bans in public schools have surged to record levels — more than 22,000 instances tracked since 2021 by PEN America. What's driving the wave, which states are leading the trend, and what it means for students.</p>
+          </div>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts/ec196de6-2f96-417a-b628-53627f98356d/evidence-to-lead" target="_blank" rel="noopener" style="text-decoration:none;">
+          <div class="ep-card">
+            <div class="ep-card__top">
+              <span class="ep-card__tag">Tutoring &amp; Intervention</span>
+              <span class="ep-card__date">Oct 24, 2025 · 17 min</span>
+            </div>
+            <p class="ep-card__title">Providing Better Tutoring: Inside the High-Impact Tutoring Toolkit</p>
+            <p class="ep-card__desc">A deep dive into what it takes to design and sustain effective, high-impact tutoring programs — drawing on the Toolkit for Tutoring Programs and the research base on what makes tutoring actually move the needle for students.</p>
+          </div>
+        </a>
+
       </div>
     </div>
   </div>
